@@ -1,4 +1,5 @@
-- #### Documentation
+#### Documentation
+You do not need to use all these parameters, but specificity can help with code output if you encounter problems.
 
 - `type`: The type of request (e.g., `explain`, `code`, `compare`, `optimize`, `debug`). This is an option selection.
 	- `explain` A request to explain a `topic` or `code`. This is a specific option value.
