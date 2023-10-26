@@ -4,4 +4,9 @@
 
 `pattern_name: "MCV"`, denotes this spcific section of code's pattern name.
 
-`components:`, the spcific sections of code to generate.
+`components:`, the spcific sections of code to generate. Each sub-item should share its index in `design_patterns`/`patterns`
+
+Excerpt:
+- `pattern_name: "Observer"` the name for context.
+- `components:` the sub-sections of the main pattern.
+- `relations:` text description of what this section should do and behave.
