@@ -1,0 +1,38 @@
+- #### Documentation
+- `type`: The type of request (e.g., `explain`, `code`, `compare`, `optimize`, `debug`). This is an option selection.
+	- `explain` A request to explain a `topic` or `code`. This is a specific option value.
+	- `code` A request to generate code from a `topic` in a `language`.  This is a specific option value.
+	- `compare` A request to compare multiple or singular `topic`s across multiple `language`s  or `code` snippets.  This is a specific option value.
+	- `optimize` A request to make `code` more performant.  This is a specific option value.
+	- `debug` A request to solve an `issue` of `code`.  This is a specific option value.
+- `topic`: The specific topic or concept under discussion. This is a text input.
+- `language`: Programming language for `compare` or `code`. This is a text input or option selection.
+- `code`: The code snippet you want to discuss. This has many sub-parameters.
+	- `context`: The `code` itself (e.g. `string HelloWorld = "Hello World!"`). This is text input.
+	- `classes`: Holds class(es) to be generated. This is an array of text values.
+	- `functions`: Holds the function(es) to be generated. This is an array  of text values.
+	- `variables`: Holds the variable(s) to be generated. This is an array  of text values.
+	- `architectural`: This is a way to structure `code`. This is an array of architectural patterns.
+		- `pattern`: The specifics of implementing the sub-designs for `code` implementation (e.g. `MCV`). This is a is a text input or option selection.
+		- `components`:  The main parts of this architectural pattern (e.g. `Model`, `View`, `Controller`). This is an array of text.
+		- `concurrency`: The multi-threaded paradigm to implement throughout the `code` (e.g. `active_object`, `barrier`, `read_write_lock`). This is a text input or option selection.
+		- `relations`: A text description of the relationship(s) between the components. This is text input.
+		- `designs`: Holds multiple design patterns for `code` implementation. This is an array of design patterns.
+			- `pattern`: The specifics of implementing code by a design pattern (e.g. `factory`, `observer`, `adapter`, `flyweight`, `facade`). This is a text input or option selection.
+			- `components`: The `classes`, `functions`, and or `variables` for the `pattern` to use. This is an array of selected values from the input of `classes`, `functions`, and `variables` sections.
+			- `relations`: A text description of the relationship(s) between the components. This is text input.
+- `style`: Holds specifics for `code`.
+	- `naming`: Hold specifies for `code` naming conventions (e.g. `snake_case`, `camelCase`, `PascalCase`). This can hold a value to imply a global naming convention, otherwise it has sub-parameters.
+		- `variables`: The way a variable is named. This holds a text value.
+		- `functions`: The way a function is named. This holds a text value.
+		- `classes`: The way a class is named. This holds a text value.
+	- `indentation_and_spacing`: Holds specifies for `code` formating.
+		- `indent_size`: The indent size in spaces. If this is only present this will imply it's use. This hold an integer value.
+		- `tab_width`: The indent size in tabs. If this is only present this will imply it's use. This hold an integer value.
+		- `use_tabs`: If `true`, `code` will use tabs instead of spaces. If `false`, `code` will use spaces instead of tabs` This is only needed if `tab_width` and `indent_size` are present. This holds a boolean value.
+	- `braces`:  Specifies the bracing format in `code`. This is a selected value or text input.
+	- `init`: Specifies if `variables` should have a starting value when created. This holds a boolean value.
+	- `header`: Specifies the top reference's, (e.g. `#include`, `import`), ordering (e.g. `alphabetical`, `system_project`, `project_system`). This is a selected value or text input.
+- `comments`: The absence of this is to not have comments in `code` generation. If it is present style of a comment can be specified (e.g. `single_line`, `multi_line`). This is a selected value or text input.
+- `issue`: Description of the issue for `debug`. This is a text input.
+- `doc_format`: Specifies documentation format for `code` (e.g. `Doxygen`, `MkDocs`, `YARD`). This is a selected value or text input.
