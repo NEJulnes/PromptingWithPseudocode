@@ -6,6 +6,8 @@
 
 `components:`, the spcific sections of code to generate. Each sub-item should share its index in `design_patterns`/`patterns`
 
+`design_patterns:`, is an array of the `code` sections of the pattern.
+
 Excerpt:
 - `pattern_name: "Observer"` the name for context.
 - `components:` the sub-sections of the main pattern.
