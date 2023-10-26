@@ -1,4 +1,5 @@
 - #### Documentation
+
 - `type`: The type of request (e.g., `explain`, `code`, `compare`, `optimize`, `debug`). This is an option selection.
 	- `explain` A request to explain a `topic` or `code`. This is a specific option value.
 	- `code` A request to generate code from a `topic` in a `language`.  This is a specific option value.
@@ -9,7 +10,8 @@
 - `language`: Programming language for `compare` or `code`. This is a text input or option selection.
 - `code`: The code snippet you want to discuss. This has many sub-parameters.
 	- `context`: The `code` itself (e.g. `string HelloWorld = "Hello World!"`). This is text input.
-	- `classes`: Holds class(es) to be generated. This is an array of text values.
+	- `components`: Denotes the sections to be generated. This is an array of text values.
+ 	- `classes`: Holds the class(es) to be generated. This is an array  of text values.
 	- `functions`: Holds the function(es) to be generated. This is an array  of text values.
 	- `variables`: Holds the variable(s) to be generated. This is an array  of text values.
 	- `architectural`: This is a way to structure `code`. This is an array of architectural patterns.
