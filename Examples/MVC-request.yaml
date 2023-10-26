@@ -1,0 +1,13 @@
+type: "code"
+topic: "Patterns"
+language: "C++"
+architectural_patterns:
+  - pattern_name: "MVC"
+    components: ["Model", "View", "Controller"]
+    design_patterns:
+      - pattern_name: "Observer"
+        components: ["Model", "View"]
+        relations: "Model notifies View"
+      - pattern_name: "Strategy"
+        components: ["Controller", "View"]
+        relations: "Controller changes View behavior"
