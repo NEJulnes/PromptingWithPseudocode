@@ -1,0 +1,23 @@
+type: "code"
+topic: "Patterns"
+language: "C++"
+architectural_patterns:
+  - pattern_name: "Action-Domain-Responder"
+    components: ["Action", "Domain", "Responder", "FakeDatabase", "Account", "AccountType"]
+    description: 
+      - "Action: Takes input for username and password, interacts with Domain for authentication."
+      - "Domain: Contains account type, authenticates user."
+      - "Responder: Sends page based on account type."
+      - "FakeDatabase: Holds account data and provides method to find user."
+      - "Account: Represents an account with username, password, and type."
+      - "AccountType: Enum representing the type of account."
+    design_patterns:
+      - pattern_name: "Singleton"
+        components: ["FakeDatabase"]
+        relations: "Single instance to represent database."
+      - pattern_name: "Factory"
+        components: ["Account"]
+        relations: "Factory method to create Account objects."
+      - pattern_name: "Strategy"
+        components: ["Responder"]
+        relations: "Strategy pattern for different page generation methods."
