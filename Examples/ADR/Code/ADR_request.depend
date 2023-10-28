@@ -1,0 +1,59 @@
+# depslib dependency file v1.0
+1698524623 source:c:\users\shi\source\repos\adr_request\main.cpp
+	<iostream>
+	"action.h"
+	"fakedatabase.h"
+	"accounttype.h"
+
+1698520610 source:c:\users\shi\source\repos\adr_request\responder.cpp
+	"responder.h"
+
+1698524610 c:\users\shi\source\repos\adr_request\responder.h
+	<iostream>
+	<string>
+	"accounttype.h"
+
+1698525262 source:c:\users\shi\source\repos\adr_request\fakedatabase.cpp
+	<iostream>
+	<string>
+	"fakedatabase.h"
+
+1698525369 c:\users\shi\source\repos\adr_request\fakedatabase.h
+	<iostream>
+	<string>
+	<vector>
+	<optional>
+	"account.h"
+
+1698525320 c:\users\shi\source\repos\adr_request\action.h
+	<iostream>
+	<string>
+	"domain.h"
+	"responder.h"
+
+1698525203 c:\users\shi\source\repos\adr_request\domain.h
+	<string>
+	"fakedatabase.h"
+	"accounttype.h"
+
+1698524712 source:c:\users\shi\source\repos\adr_request\domain.cpp
+	<string>
+	"domain.h"
+
+1698523746 source:c:\users\shi\source\repos\adr_request\account.cpp
+	"account.h"
+
+1698525114 c:\users\shi\source\repos\adr_request\account.h
+	<string>
+	"accounttype.h"
+
+1698524284 c:\users\shi\source\repos\adr_request\\accounttype.h
+
+1698524267 source:c:\users\shi\source\repos\adr_request\accounttype.cpp
+	"accounttype.h"
+
+1698524284 c:\users\shi\source\repos\adr_request\accounttype.h
+
+1698524931 source:c:\users\shi\source\repos\adr_request\action.cpp
+	"action.h"
+
